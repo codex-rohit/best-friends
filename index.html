@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Best Friend</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Gradient Background -->
+    <div class="animated-gradient-background"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>For My Best Friend</h1>
+            <p class="subtitle">This one's for you. 💜</p>
+        </header>
+
+        <!-- Song Player -->
+        <div class="song-player">
+            <button id="play-button">🎵 Click to Play the Song</button>
+            <audio id="lofi-song" loop>
+                <source src="song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Memories Section -->
+        <section class="memories">
+            <h2>Our Memories</h2>
+            <div class="memory-grid">
+                <!-- Memory 1: Image -->
+                <div class="memory-item" style="--delay: 1">
+                    <div class="media-container">
+                        <img src="memory1.jpg" alt="Memory 1">
+                    </div>
+                    <p>You are the DNA of elegance, but I'm clearly the dominant gene here.😉🧬</p>
+                </div>
+
+                <!-- Memory 2: Video -->
+                <div class="memory-item" style="--delay: 2">
+                    <div class="media-container">
+                        <video id="memory-video" controls>
+                            <source src="memory2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>Not every beautiful moment is planned — some are simply lived.</p>
+                </div>
+
+                <!-- Memory 3: Image -->
+                <div class="memory-item" style="--delay: 3">
+                    <div class="media-container">
+                        <img src="memory3.jpg" alt="Memory 3">
+                    </div>
+                    <p>Some memories never fade, they simply grow more precious with time.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with 💜 by Rohit</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Auto-start the video after 10 seconds
+        setTimeout(function() {
+            const video = document.getElementById('memory-video');
+            video.play().catch(e => console.log("Autoplay prevented:", e));
+        }, 10000); // 10 seconds delay
+    </script>
+</body>
+</html>
